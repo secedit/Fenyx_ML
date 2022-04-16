@@ -68,6 +68,7 @@ def preprocess(df, option):
         df = pd.get_dummies(df, columns=["Sex"])
         #Drop Passenger ID and Cabin
         df.drop(labels = ["PassengerId", "Cabin"], axis = 1, inplace = True)
+        df.columns = df.columns.str.replace('\n', '')
         print(df.head())
     else:
         print("Incorrect operational options")
