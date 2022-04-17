@@ -38,6 +38,7 @@ def preprocess(df, option):
         df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
         #print(df.head())
     elif (option == "Batch"):
+        pass
         #Drop Passenger ID and Cabin
         df.drop(labels = ["PassengerId", "Cabin"], axis = 1, inplace = True)
         #Name title operatiom
