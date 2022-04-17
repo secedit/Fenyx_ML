@@ -57,7 +57,7 @@ def preprocess(df, option):
         #ticket operation
         tickets = []
         for i in list(df.Ticket):
-            if not i.isdigit():
+            if not (str(i).isdigit()):
                 tickets.append(i.replace(".","").replace("/","").strip().split(" ")[0])
             else:
                 tickets.append("x")
