@@ -53,7 +53,7 @@ def preprocess(df, option):
         #print(df.head())
         #embark operation
         df = pd.get_dummies(df, columns=["Embarked"])
-        #print(df.head())
+        print(df.head())
         #ticket operation
         tickets = []
         for i in list(df.Ticket):
