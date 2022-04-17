@@ -38,6 +38,7 @@ def preprocess(df, option):
         df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
         #print(df.head())
     elif (option == "Batch"):
+        df=df(df)
         #Name title operatiom
         name = df["Name"]
         df["Title"] = [i.split(".")[0].split(",")[-1].strip() for i in name]
