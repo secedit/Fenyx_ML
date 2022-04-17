@@ -48,12 +48,15 @@ def preprocess(df, option):
         df["Title"] = [0 if i == "Master" else 1 if i == "Miss" or i == "Ms" or i == "Mlle" or i == "Mrs" else 2 if i == "Mr" else 3 for i in df["Title"]]
         df.drop(labels = ["Name"], axis = 1, inplace = True)
         df = pd.get_dummies(df,columns=["Title"])
+        print(df.head())
         #family size operation
         df["Fsize"] = df["SibSp"] + df["Parch"] + 1
         df["family_size"] = [1 if i < 5 else 0 for i in df["Fsize"]]
         df = pd.get_dummies(df, columns= ["family_size"])
+        print(df.head())
         #embark operation
         df = pd.get_dummies(df, columns=["Embarked"])
+        print(df.head())
         #ticket operation
         tickets = []
         for i in list(df.Ticket):
@@ -63,9 +66,11 @@ def preprocess(df, option):
                 tickets.append("x")
         df["Ticket"] = tickets
         df = pd.get_dummies(df, columns= ["Ticket"], prefix = "T")
+        print(df.head())
         #pclass operation
         df["Pclass"] = df["Pclass"].astype("category")
         df = pd.get_dummies(df, columns= ["Pclass"])
+        print(df.head())
         #gender operation
         #df["Sex"] = df["Sex"].astype("category")
         df = pd.get_dummies(df, columns=["Sex"])
