@@ -211,8 +211,7 @@ def main():
                 #Get batch prediction
                 prediction = model.predict(preprocess_df)
                 prediction_df = pd.DataFrame(prediction, columns=["Predictions"])
-                prediction_df = prediction_df.replace({1:'Yes, the passenger survive.', 
-                                                    0:'No, the passenger died'})
+                prediction_df = prediction_df.replace({1:'Yes, the passenger survive.', 0:'No, the passenger died'})
 
                 st.markdown("<h3></h3>", unsafe_allow_html=True)
                 st.subheader('Prediction')
