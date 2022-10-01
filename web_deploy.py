@@ -44,6 +44,11 @@ def main():
     st.sidebar.image(image)
     st.sidebar.info('This app uses Gradient Boosting Model (GBM)')
     if add_selectbox == "Online":
+         st.markdown("""
+          :dart:  This Streamlit app is made to predict Titanic use case.
+          The application is functional for both online prediction and batch data prediction. \n
+           """)
+        st.markdown("<h3></h3>", unsafe_allow_html=True)
         st.info("Input data below")
         #Based on our optimal features selection
         st.subheader("Passenger data")
@@ -166,6 +171,11 @@ def main():
         
 
     else:
+        st.markdown("""
+          :dart:  This Streamlit app is made to predict Titanic use case.
+          The application is functional for both online prediction and batch data prediction. \n
+           """)
+        st.markdown("<h3></h3>", unsafe_allow_html=True)
         st.subheader("Dataset upload")
         uploaded_file = st.file_uploader("Choose a file")
         if uploaded_file is not None:
