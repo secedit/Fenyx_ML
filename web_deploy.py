@@ -44,7 +44,7 @@ def main():
         st.info("Input data below")
         #Based on our optimal features selection
         st.subheader("Passenger data")
-        age = st.number_input('Age of Passenger ', min_value=0, max_value=75, value=20)
+        age = st.slider('Age of Passenger ', 0,75,20)
         sibSp = st.number_input('number of siblings/spouses', min_value=0, max_value=8, value=0)
         parch = st.number_input('number of parents/children' , min_value=0, max_value=6, value=0)
         fare = st.number_input('Ticket Price', min_value=0, max_value=512, value=15)
