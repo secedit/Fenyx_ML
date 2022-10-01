@@ -51,7 +51,7 @@ def preprocess(df, option):
         df["Fsize"] = df["SibSp"] + df["Parch"] + 1
         df["family_size"] = [1 if i < 5 else 0 for i in df["Fsize"]]
         df = pd.get_dummies(df, columns= ["family_size"])
-        #print(df.head())
+        print(df.head())
         #embark operation
         df = pd.get_dummies(df, columns=["Embarked"])
         #print(df.head())
