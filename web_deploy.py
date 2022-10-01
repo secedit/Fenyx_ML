@@ -28,6 +28,9 @@ def main():
 
       #Setting Application description
     st.markdown("""
+     ::dart: The sinking of Titanic is one of the most notorious shipwrecks in the history. 
+    In 1912, during her voyage, the Titanic sank after colliding with an iceberg, 
+    killing 1502 out of 2224 passengers and crew.. \n
      :dart:  This Streamlit app is made to predict Titanic use case.
     The application is functional for both online prediction and batch data prediction. \n
     """)
