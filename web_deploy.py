@@ -178,7 +178,7 @@ def main():
             #Preprocess inputs
             preprocess_df = preprocess(data, "Batch")
             if st.button('Predict'):
-                #Get batch prediction
+               #Get batch prediction
                 prediction = model.predict(preprocess_df)
                 prediction_df = pd.DataFrame(prediction, columns=["Predictions"])
                 prediction_df = prediction_df.replace({1:'Yes, the passenger survive.', 0:'No, the passenger died'})
