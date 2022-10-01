@@ -28,7 +28,7 @@ def main():
 
       #Setting Application description
     st.markdown("""
-     ::dart: The sinking of Titanic is one of the most notorious shipwrecks in the history. 
+     :dart: The sinking of Titanic is one of the most notorious shipwrecks in the history. 
     In 1912, during her voyage, the Titanic sank after colliding with an iceberg, 
     killing 1502 out of 2224 passengers and crew.. \n
      :dart:  This Streamlit app is made to predict Titanic use case.
@@ -42,7 +42,8 @@ def main():
     "How would you like to predict?", ("Online", "Batch"))
     st.sidebar.info('This app is created to predict Titanic use case')
     st.sidebar.image(image)
-
+    st.sidebar.info('This app uses Gradient Boosting Model (GBM)')
+import
     if add_selectbox == "Online":
         st.info("Input data below")
         #Based on our optimal features selection
