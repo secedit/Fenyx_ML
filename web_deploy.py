@@ -45,9 +45,9 @@ def main():
         #Based on our optimal features selection
         st.subheader("Passenger data")
         age = st.slider('Age of Passenger ', 0,75,20)
-        sibSp = st.number_input('number of siblings/spouses', min_value=0, max_value=8, value=0)
-        parch = st.number_input('number of parents/children' , min_value=0, max_value=6, value=0)
-        fare = st.number_input('Ticket Price', min_value=0, max_value=512, value=15)
+        sibSp = st.slider('number of siblings/spouses',0,8,0)
+        parch = st.slidert('number of parents/children' ,0,6,0)
+        fare = st.number_input('Ticket Price', 0,512,35)
         
         st.subheader("Passenger Title")                       
         title_0 = st.selectbox('Is Passenger title Master:', ('No','Yes'))
