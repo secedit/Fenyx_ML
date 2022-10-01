@@ -39,7 +39,7 @@ def preprocess(df, option):
         #pass
         #Drop Passenger ID and Cabin
         df.drop(labels = ["PassengerId", "Cabin"], axis = 1, inplace = True)
-        print(df.head())
+        #print(df.head())
         #Name title operatiom
         name = df["Name"]
         df["Title"] = [i.split(".")[0].split(",")[-1].strip() for i in name]
@@ -54,7 +54,7 @@ def preprocess(df, option):
         #print(df.head())
         #embark operation
         df = pd.get_dummies(df, columns=["Embarked"])
-        print(df.head())
+        #print(df.head())
         #ticket operation
         tickets = []
         for i in list(df.Ticket):
@@ -68,7 +68,6 @@ def preprocess(df, option):
         #pclass operation
         df["Pclass"] = df["Pclass"].astype("category")
         df = pd.get_dummies(df, columns= ["Pclass"])
-        print(df.head())
         #gender operation
         #df["Sex"] = df["Sex"].astype("category")
         df = pd.get_dummies(df, columns=["Sex"])
@@ -80,6 +79,7 @@ def preprocess(df, option):
                    'Pclass_1','Pclass_2','Pclass_3', 'Sex_female', 'Sex_male']
         #Encoding the other categorical categoric features with more than two categories
         df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
+        print(df.head())
     else:
         print("Incorrect operational options")
 
