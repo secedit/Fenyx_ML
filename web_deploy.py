@@ -38,11 +38,13 @@ def main():
 
     #Setting Application sidebar default
     image = Image.open('App.png')
+    image1 = Image.open('importance.png')
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict?", ("Online", "Batch"))
     st.sidebar.info('This app is created to predict Titanic use case')
     st.sidebar.image(image)
     st.sidebar.info('This app uses Gradient Boosting Model (GBM)')
+    st.sidebar.image(image1)
     if add_selectbox == "Online":
         st.info("Input data below")
         #Based on our optimal features selection
