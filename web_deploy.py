@@ -46,8 +46,8 @@ def main():
         st.subheader("Passenger data")
         age = st.slider('Age of Passenger ', 0,75,20)
         sibSp = st.slider('number of siblings/spouses',0,8,0)
-        parch = st.slidert('number of parents/children' ,0,6,0)
-        fare = st.number_input('Ticket Price', 0,512,35)
+        parch = st.slider('number of parents/children' ,0,6,0)
+        fare = st.slider('Ticket Price', 0,512,35)
         
         st.subheader("Passenger Title")                       
         title_0 = st.selectbox('Is Passenger title Master:', ('No','Yes'))
