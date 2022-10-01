@@ -71,6 +71,7 @@ def preprocess(df, option):
         #gender operation
         #df["Sex"] = df["Sex"].astype("category")
         df = pd.get_dummies(df, columns=["Sex"])
+        print(df.head())
         columns = ['Age','Sibsp','Parch','Fare',
                    'Title_0','Title_1','Title_2','Title_3','Fsize','family_size_0','family_size_1','Embarked_C','Embarked_Q','Embarked_S','T_A','T_A4',
                    'T_A5','T_AQ3', 'T_AQ4', 'T_AS', 'T_C', 'T_CA', 'T_CASOTON', 'T_FC', 'T_FCC','T_Fa','T_LINE', 'T_LP', 
@@ -79,7 +80,7 @@ def preprocess(df, option):
                    'Pclass_1','Pclass_2','Pclass_3', 'Sex_female', 'Sex_male']
         #Encoding the other categorical categoric features with more than two categories
         df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
-        print(df.head())
+        #print(df.head())
     else:
         print("Incorrect operational options")
 
