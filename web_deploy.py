@@ -66,46 +66,12 @@ def main():
         embarked_s = st.selectbox('Is Passenger Embarked Southampton', ('No','Yes'))
         
         st.subheader("Passenger Ticket")   
-        t_A = st.selectbox('Is Passenger Ticket starts A', ('No','Yes')) 
-        t_A4 = st.selectbox('Is Passenger Ticket starts A4', ('No','Yes'))
         t_A5 = st.selectbox('Is Passenger Ticket starts A5', ('No','Yes')) 
-        t_AQ3 = st.selectbox('Is Passenger Ticket starts AQ3', ('No','Yes'))
-        t_AQ4 = st.selectbox('Is Passenger Ticket starts AQ4', ('No','Yes')) 
-        t_AS = st.selectbox('Is Passenger Ticket starts AS', ('No','Yes')) 
         t_C = st.selectbox('Is Passenger Ticket starts C', ('No','Yes')) 
-        t_CA = st.selectbox('Is Passenger Ticket starts CA', ('No','Yes')) 
-        t_CASOTON = st.selectbox('Is Passenger Ticket starts CASOTON', ('No','Yes')) 
-        t_FC = st.selectbox('Is Passenger Ticket starts FC', ('No','Yes')) 
-        t_FCC = st.selectbox('Is Passenger Ticket starts FCC', ('No','Yes')) 
-        t_Fa =  st.selectbox('Is Passenger Ticket starts Fa', ('No','Yes')) 
-        t_LINE =  st.selectbox('Is Passenger Ticket starts LINE', ('No','Yes')) 
-        t_LP=  st.selectbox('Is Passenger Ticket starts LP', ('No','Yes')) 
-        t_PC =  st.selectbox('Is Passenger Ticket starts PC', ('No','Yes'))
-        t_PP =  st.selectbox('Is Passenger Ticket starts PP', ('No','Yes'))
-        t_PPP =  st.selectbox('Is Passenger Ticket starts PPP', ('No','Yes')) 
-        t_SC =  st.selectbox('Is Passenger Ticket starts SC', ('No','Yes')) 
-        t_SCA3 = st.selectbox('Is Passenger Ticket starts SCA3', ('No','Yes')) 
-        t_SCA4 = st.selectbox('Is Passenger Ticket starts SCA4', ('No','Yes')) 
-        t_SCAH = st.selectbox('Is Passenger Ticket starts SCAH', ('No','Yes')) 
-        t_SCOW = st.selectbox('Is Passenger Ticket starts SCOW', ('No','Yes'))
-        t_SCPARIS = st.selectbox('Is Passenger Ticket starts SCPARIS', ('No','Yes')) 
-        t_SCParis = st.selectbox('Is Passenger Ticket starts SCParis', ('No','Yes')) 
-        t_SOC = st.selectbox('Is Passenger Ticket starts SOC', ('No','Yes')) 
-        t_SOP = st.selectbox('Is Passenger Ticket starts SOP', ('No','Yes')) 
         t_SOPP = st.selectbox('Is Passenger Ticket starts SOPP', ('No','Yes')) 
-        t_SOTONO2 = st.selectbox('Is Passenger Ticket starts SOTONO2', ('No','Yes')) 
-        t_SOTONOQ = st.selectbox('Is Passenger Ticket starts SOTONOQ', ('No','Yes'))
-        t_SP = st.selectbox('Is Passenger Ticket starts SP', ('No','Yes')) 
-        t_STONO = st.selectbox('Is Passenger Ticket starts STONO', ('No','Yes')) 
-        t_STONO2 = st.selectbox('Is Passenger Ticket starts STONO2', ('No','Yes'))
-        t_STONOQ = st.selectbox('Is Passenger Ticket starts STONOQ', ('No','Yes'))                       
+        t_STONO = st.selectbox('Is Passenger Ticket starts STONO', ('No','Yes'))                     
         t_SWPP = st.selectbox('Is Passenger Ticket starts SWPP', ('No','Yes'))
-        t_WC= st.selectbox('Is Passenger Ticket starts WC', ('No','Yes'))
-        t_WEP = st.selectbox('Is Passenger Ticket starts WEP', ('No','Yes'))
-        t_x = st.selectbox('Is Passenger Ticket starts others', ('No','Yes'))                     
-                             
         
-                             
         st.subheader("Passenger Class")   
         pclass_1 = st.selectbox('Is Passenger Class 1', ('No','Yes')) 
         pclass_2 = st.selectbox('Is Passenger Class 2', ('No','Yes')) 
@@ -114,7 +80,6 @@ def main():
         sex_female = st.selectbox('Is Passenger Female', ('No','Yes')) 
         sex_male  = st.selectbox('Is Passenger Male', ('No','Yes')) 
         
-      
 
 
         
@@ -133,43 +98,43 @@ def main():
                 'Embarked_C': embarked_c,
                 'Embarked_Q': embarked_q,
                 'Embarked_S': embarked_s,
-                'T_A': t_A,
-                'T_A4':t_A4,
+                'T_A': 'No',
+                'T_A4':'No',
                 'T_A5':t_A5,
-                'T_AQ3':t_AQ3, 
-                'T_AQ4':t_AQ4, 
-                'T_AS':t_AS, 
+                'T_AQ3':'No', 
+                'T_AQ4':'No', 
+                'T_AS':'No', 
                 'T_C':t_C, 
-                'T_CA':t_CA, 
-                'T_CASOTON':t_CASOTON, 
-                'T_FC':t_FC, 
-                'T_FCC':t_FCC,
-                'T_Fa':t_Fa,
-                'T_LINE':t_LINE, 
-                'T_LP':t_LP, 
-                'T_PC':t_PC,
-                'T_PP':t_PP, 
-                'T_PPP':t_PPP, 
-                'T_SC':t_SC, 
-                'T_SCA3':t_SCA3,
-                'T_SCA4':t_SCA4, 
-                'T_SCAH':t_SCAH, 
-                'T_SCOW':t_SCOW, 
-                'T_SCPARIS':t_SCPARIS, 
-                'T_SCParis':t_SCParis, 
-                'T_SOC':t_SOC,
-                'T_SOP':t_SOP,
+                'T_CA':'No', 
+                'T_CASOTON':'No', 
+                'T_FC':'No', 
+                'T_FCC':'No',
+                'T_Fa':'No',
+                'T_LINE':'No', 
+                'T_LP':'No', 
+                'T_PC':'No',
+                'T_PP':'No', 
+                'T_PPP':'No', 
+                'T_SC':'No', 
+                'T_SCA3':'No',
+                'T_SCA4':'No', 
+                'T_SCAH':'No', 
+                'T_SCOW':'No', 
+                'T_SCPARIS':'No', 
+                'T_SCParis':'No', 
+                'T_SOC':'No',
+                'T_SOP':'No',
                 'T_SOPP':t_SOPP, 
-                'T_SOTONO2':t_SOTONO2, 
-                'T_SOTONOQ':t_SOTONOQ, 
-                'T_SP':t_SP, 
+                'T_SOTONO2':'No', 
+                'T_SOTONOQ':'No', 
+                'T_SP':'No', 
                 'T_STONO':t_STONO,
-                'T_STONO2':t_STONO2,
-                'T_STONOQ':t_STONOQ, 
+                'T_STONO2':'No',
+                'T_STONOQ':'No', 
                 'T_SWPP':t_SWPP, 
-                'T_WC':t_WC, 
-                'T_WEP':t_WEP, 
-                'T_x':t_x, 
+                'T_WC':'No', 
+                'T_WEP':'No', 
+                'T_x':'No', 
                 'Pclass_1':pclass_1,
                 'Pclass_2':pclass_2, 
                 'Pclass_3':pclass_3, 
