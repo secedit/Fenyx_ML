@@ -39,7 +39,7 @@ def preprocess(df, option):
         #pass
         #Drop Passenger ID and Cabin
         df.drop(labels = ["PassengerId", "Cabin"], axis = 1, inplace = True)
-        #print(df.head())
+        print(df.head())
         #Name title operatiom
         name = df["Name"]
         df["Title"] = [i.split(".")[0].split(",")[-1].strip() for i in name]
