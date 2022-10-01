@@ -57,16 +57,16 @@ def main():
         st.subheader("Passenger Title")                       
         title_0 = st.selectbox('Is Passenger title Master:', ('No','Yes'))
         title_1 = st.selectbox('Is Passenger title Mrs:', ('No','Yes'))
-        title_2 = st.selectbox('Is Passenger title Mr:', ('No','Yes'))
+        title_2 = st.selectbox('Is Passenger title Mr:', ('Yes','No'))
         title_3 = st.selectbox('Is Passenger title Others:', ('No','Yes'))
         
         st.subheader("Passenger Family Data")   
         fsize = st.number_input('Passenger Family Size', min_value=0, max_value=9, value=1)
-        family_size_0 = st.selectbox('Is Passenger Family Size smaller then 5', ('No','Yes'))
+        family_size_0 = st.selectbox('Is Passenger Family Size smaller then 5', ('Yes','No'))
         family_size_1 = st.selectbox('Is Passenger Family Size greater then 5', ('No','Yes'))                       
         
         st.subheader("Passenger Embark")   
-        embarked_c = st.selectbox('Is Passenger Embarked Cherbourg', ('No','Yes')) 
+        embarked_c = st.selectbox('Is Passenger Embarked Cherbourg', ('Yes','No')) 
         embarked_q = st.selectbox('Is Passenger Embarked Queenstown', ('No','Yes')) 
         embarked_s = st.selectbox('Is Passenger Embarked Southampton', ('No','Yes'))
         
@@ -80,10 +80,10 @@ def main():
         st.subheader("Passenger Class")   
         pclass_1 = st.selectbox('Is Passenger Class 1', ('No','Yes')) 
         pclass_2 = st.selectbox('Is Passenger Class 2', ('No','Yes')) 
-        pclass_3 = st.selectbox('Is Passenger Class 3', ('No','Yes')) 
+        pclass_3 = st.selectbox('Is Passenger Class 3', ('Yes','No')) 
         
         sex_female = st.selectbox('Is Passenger Female', ('No','Yes')) 
-        sex_male  = st.selectbox('Is Passenger Male', ('No','Yes')) 
+        sex_male  = st.selectbox('Is Passenger Male', ('Yes','No')) 
         
 
 
