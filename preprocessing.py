@@ -45,7 +45,7 @@ def preprocess(df, option):
         df["Title"] = [i.split(".")[0].split(",")[-1].strip() for i in name]
         df["Title"] = df["Title"].replace(["Lady","the Countess","Capt","Col","Don","Dr","Major","Rev","Sir","Jonkheer","Dona"],"other")
         df["Title"] = [0 if i == "Master" else 1 if i == "Miss" or i == "Ms" or i == "Mlle" or i == "Mrs" else 2 if i == "Mr" else 3 for i in df["Title"]]
-        print("test",df.head())
+        print("test",df["Title"])
         df.drop(labels = ["Name"], axis = 1, inplace = True)
         df = pd.get_dummies(df,columns=["Title"])
         #family size operation
