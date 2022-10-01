@@ -39,13 +39,13 @@ def preprocess(df, option):
         #pass
         #Drop Passenger ID and Cabin
         df.drop(labels = ["PassengerId", "Cabin"], axis = 1, inplace = True)
-        print(df.isna().sum().sum())
+        #print(df.isna().sum().sum())
         #Name title operatiom
         name = df["Name"]
         df["Title"] = [i.split(".")[0].split(",")[-1].strip() for i in name]
         df["Title"] = df["Title"].replace(["Lady","the Countess","Capt","Col","Don","Dr","Major","Rev","Sir","Jonkheer","Dona"],"other")
         df["Title"] = [0 if i == "Master" else 1 if i == "Miss" or i == "Ms" or i == "Mlle" or i == "Mrs" else 2 if i == "Mr" else 3 for i in df["Title"]]
-        print("test",df["Title"])
+        #print("test",df["Title"])
         df.drop(labels = ["Name"], axis = 1, inplace = True)
         df = pd.get_dummies(df,columns=["Title"])
         #family size operation
@@ -72,7 +72,7 @@ def preprocess(df, option):
         #gender operation
         #df["Sex"] = df["Sex"].astype("category")
         df = pd.get_dummies(df, columns=["Sex"])
-        print(df.head())
+        #print(df.head())
         columns = ['Age','Sibsp','Parch','Fare',
                    'Title_0','Title_1','Title_2','Title_3','Fsize','family_size_0','family_size_1','Embarked_C','Embarked_Q','Embarked_S','T_A','T_A4',
                    'T_A5','T_AQ3', 'T_AQ4', 'T_AS', 'T_C', 'T_CA', 'T_CASOTON', 'T_FC', 'T_FCC','T_Fa','T_LINE', 'T_LP', 
