@@ -44,7 +44,7 @@ def main():
     st.sidebar.image(image)
     st.sidebar.info('This app uses Gradient Boosting Model (GBM)')
     if add_selectbox == "Online":
-         st.markdown("""
+        st.markdown("""
           :dart:  This Streamlit app is made to predict Titanic use case.
           The application is functional for both online prediction and batch data prediction. \n
            """)
